@@ -22,3 +22,8 @@ export type Post = {
   excerpt: string
   date: string
 }
+
+export type Record = {
+  __typename: string
+  image: Image
+}

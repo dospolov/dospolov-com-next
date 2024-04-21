@@ -2,7 +2,7 @@ import Video from "./video"
 import Image from "./image"
 import Tags from "./tags"
 import Date from "./date"
-import { Post } from "@/types"
+import { Post } from "../types"
 
 const Announce = ({ post }: { post: Post }) => {
   return (
