@@ -3,7 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import PageBackground from "@/components/page-background"
+import PageBackground from "@/components/backgrounds/page-background"
 import { cn } from "@/lib/utils"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "bg-gray-900 text-gray-200 tracking-tight flex flex-col min-h-screen overflow-hidden"
+          "bg-gray-900 text-gray-200 tracking-tight flex flex-col min-h-screen"
         )}
       >
         <div

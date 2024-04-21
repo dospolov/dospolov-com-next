@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="max-w-6xl mx-auto p-4 sm:p-6 relative">
       <div className="flex justify-between">
-        <a href="/" className="flex mr-8 sm:mr-16">
+        <Link href="/" className="flex mr-8 sm:mr-16">
           <div className="w-10 mr-3">
             <Image
               src="/avatar.jpg"
@@ -17,7 +17,7 @@ export default function Header() {
             />
           </div>
           <div className="pt-2">Marat Dospolov | JavaScript Tech Leader</div>
-        </a>
+        </Link>
 
         <nav>
           <ul className="flex flex-grow justify-end items-center">
