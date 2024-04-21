@@ -1,6 +1,6 @@
 import React from "react"
 import request from "@/lib/request"
-import getPostQuery from "@/queries/post"
+import getPageQuery from "@/queries/page"
 import Date from "@/components/date"
 import Image from "@/components/image"
 import Video from "@/components/video"
@@ -15,9 +15,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const {
     data: {
-      post: { title },
+      page: { title },
     },
-  } = await request(getPostQuery({ slug: params.slug }))
+  } = await request(getPageQuery({ slug: params.slug }))
 
   return {
     title: `${title} - Dospolov Blog`,
@@ -27,9 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: { params: { slug: string } }) {
   const {
     data: {
-      post: { title, excerpt, coverVideo, coverImage, content, slug, date },
+      page: { title, excerpt, coverVideo, coverImage, content, slug, date },
     },
-  } = await request(getPostQuery({ slug: params.slug }))
+  } = await request(getPageQuery({ slug: params.slug }))
 
   return (
     <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-10">
@@ -49,7 +49,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <Date dateString={date} />
           </div>
         </div>
-        <Comments title={title} slug={slug} />
       </div>
     </div>
   )

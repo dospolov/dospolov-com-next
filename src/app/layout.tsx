@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Dospolov Blog",
+  title: "Marat Dospolov's blog",
   description: "Marat Dospolov's blog - Javscript Tech Leader",
 }
 
