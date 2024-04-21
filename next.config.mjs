@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/as",
+        destination:
+          "https://www.microsoft.com/en-us/p/account-surfer/9phvp9rjr7r7",
+        permanent: true,
+      },
+    ]
+  },
+}
 
-export default nextConfig;
+export default nextConfig
