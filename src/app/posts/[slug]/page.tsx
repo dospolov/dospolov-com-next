@@ -1,12 +1,14 @@
 import React from "react"
 import request from "@/lib/request"
 import getPostQuery from "@/queries/post"
+import getAllPostsQuery from "@/queries/allPosts"
 import Date from "@/components/date"
 import Image from "@/components/image"
 import Video from "@/components/video"
 import Comments from "@/components/comments"
 import Content from "@/components/content"
-import type { Metadata } from "next"
+import { Metadata } from "next"
+import { Post } from "@/types"
 
 type Props = {
   params: { slug: string }
@@ -22,6 +24,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title} - Dospolov Blog`,
   }
+}
+
+export async function generateStaticParams() {
+  const parsedResponse = await request(getAllPostsQuery())
+  const posts = parsedResponse.data.allPosts ?? []
+
+  return posts.map((post: Post) => ({
+    slug: post.slug,
+  }))
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {

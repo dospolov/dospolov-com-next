@@ -1,13 +1,13 @@
 import React from "react"
 import request from "@/lib/request"
-import getHomeQuery from "@/queries/home"
+import getAllPostsQuery from "@/queries/allPosts"
 import FeaturedAnnounce from "@/components/featured-announce"
 import PlainAnnounce from "@/components/plain-announce"
 import Announce from "@/components/announce"
 import { Post } from "@/types"
 
 export default async function Home() {
-  const parsedResponse = await request(getHomeQuery())
+  const parsedResponse = await request(getAllPostsQuery())
   const posts = parsedResponse.data.allPosts ?? []
 
   const featuredPosts = posts.filter((post: Post) => post.featured)

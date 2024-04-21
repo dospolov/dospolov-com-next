@@ -1,6 +1,6 @@
-import { metaTagsFragment, responsiveImageFragment } from '../lib/fragments'
+import { metaTagsFragment, responsiveImageFragment } from "../lib/fragments"
 
-const getHomeQuery = () => ({
+const getAllPostsQuery = () => ({
   query: `
   {
     site: _site {
@@ -37,7 +37,7 @@ const getHomeQuery = () => ({
 
   ${metaTagsFragment}
   ${responsiveImageFragment}
-`
+`,
 })
 
-export default getHomeQuery
+export default getAllPostsQuery
