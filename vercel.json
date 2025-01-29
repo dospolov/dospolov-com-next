@@ -9,6 +9,21 @@
       "source": "/CV.pdf",
       "destination": "/cv.pdf",
       "permanent": true
+    },
+    {
+      "source": "/mriia-tiktok",
+      "destination": "https://www.tiktok.com/@mriia.events/video/7391289710510951712",
+      "permanent": true
+    },
+    {
+      "source": "/easy2go-dou",
+      "destination": "https://dou.ua/lenta/articles/dou-projector-easy2go/",
+      "permanent": true
+    },
+    {
+      "source": "/bigcityevent-ain",
+      "destination": "https://ain.ua/ru/2016/08/04/ukraincy-zapustili-sajt-afishu-kieva-kotoryj-pokazyvaet-v-tom-chisle-iventy-iz-facebook/",
+      "permanent": true
     }
   ]
 }
