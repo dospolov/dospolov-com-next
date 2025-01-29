@@ -24,6 +24,16 @@
       "source": "/bigcityevent-ain",
       "destination": "https://ain.ua/ru/2016/08/04/ukraincy-zapustili-sajt-afishu-kieva-kotoryj-pokazyvaet-v-tom-chisle-iventy-iz-facebook/",
       "permanent": true
+    },
+    {
+      "source": "/street-interview-example-1",
+      "destination": "https://vm.tiktok.com/ZMk465bkH/",
+      "permanent": true
+    },
+    {
+      "source": "/street-interview-example-2",
+      "destination": "https://vm.tiktok.com/ZMk46te9J/",
+      "permanent": true
     }
   ]
 }
